@@ -14,21 +14,53 @@ numbers.pop(12);
 console.log(numbers);
 
 //let
-let patientName = "rahim";
-patientName = "karim";
-patientName = "fahim";
-console.log(patientName);
+// let patientName = "rahim";
+// patientName = "karim";
+// patientName = "fahim";
+// console.log(patientName);
+
 
 //its work
-let sum = 0;
-for (var i = 0; i < 10; i++){
-    sum = sum + i;
-}
-console.log(i);
+// let sum = 0;
+// for (var i = 0; i < 10; i++){
+//     sum = sum + i;
+// }
+// console.log(i);
+
 
 //its not work
-let sum = 0;
-for (let i = 0; i < 10; i++){
-    sum = sum + i;
+// let sum = 0;
+// for (let i = 0; i < 10; i++){
+//     sum = sum + i;
+// }
+// console.log(i);
+
+
+//scoping issue
+
+var age = 26;
+if(age > 18){
+    var canVote = "I can vote";
+    console.log(canVote);
 }
-console.log(i);
+
+//var
+function prinbtNumber() {
+    for (var i = 0; i <= 10; i++){
+        console.log(i);
+    }
+    console.log(i);
+}
+
+prinbtNumber();
+
+//let
+function prinbtNumber() {
+    for (let i = 0; i <= 10; i++){
+        console.log(i);
+    }
+    //not needed
+    console.log(i);
+}
+
+prinbtNumber();
